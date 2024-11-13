@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nikolaos Gatsis">
+    <title>Βρες τους γείτονες</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="countries.js">
+    </script>
+    <script>
+        // Ένας βοηθητικός πίνακας που θα περιέχει τις χώρες από το countries.js σε λίγο πιο βολική μορφή
+        const allCountries = new Array();
+        // πχ. allCountries['GRE'] = { code2: "GR", name: "Greece"}, ή κάτι παρόμοιο 
+
+        // Εδώ μπορείτε να βάλετε τον κώδικα για όλο το παιχνίδι
+        // Μπορείτε γράψετε κλάσεις που να έχουν κάποια συμπεριφορά, 
+        // π.χ. Game, PlayingCountry, Neighbour, ...
+        // ή να και ακολουθήσετε άλλη τακτική, που να σας είναι πιο προσιτή
+
+        document.addEventListener("DOMContentLoaded", () => {
+            //start a new Game
+            //...
+
+            //event listener to new game button
+            document.querySelector("#btn-new-game").addEventListener("click", () => {
+                // ...
+            })
+
+            //event listener to next round button
+            document.querySelector("#btn-next-round").addEventListener("click", () => {
+                // ...
+            })
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="game-panel">
+        <!-- 
+                Γράψτε εδώ τον κώδικα HTML που χρειάζεστε για το παιχνίδι.
+                Κάποια από τα στοιχεία (elements) της σελίδας προστίθενται και
+                αφαιρούνται δυναμικά, μέσα από τη JavaScript, π.χ. οι σημαίες 
+                των γειτονικών χωρών κ.ά.
+            -->
+            <div id="my-country">
+                <div id="my-country-flag"></div>
+                <div id="my-country-name"></div>
+            </div>
+    
+            <div class="sidebar">
+                <div id="progress">
+                </div>
+            </div>
+            <div class="score" id="score">
+                <h2 style="text-align: center;">Βρες τους γείτονες</h2>
+    
+                <div class="flexBoxR">
+                    <div>Γύρος:</div>
+                    <div id="gyrosId"></div>
+                </div>
+    
+                <div class="flexBoxR">
+                    <div>Σκορ:</div>
+                    <div id="scorId"></div>
+                </div>
+                <div class="flexBoxC">
+                    <div class="flexBtn">
+                        <button id="btn-next-round">Επόμενη χώρα</button>
+                    </div>
+    
+                    <div class="flexBtn">
+                        <button id="btn-new-game">Νέο παιχνίδι</button>
+                    </div>
+                </div>
+    
+            </div>
+            <div id="stackingPanel">
+    
+                <div id="overlay"> </div>
+                <div id="msg"></div>
+                <div id="neighbours-panel"> </div>
+            </div>
+            <div id="mess"></div>
+            <div id="mess1">
+                <a href="https://restcountries.com"> Τα δεδομένα είναι από τον ιστότοπο https://restcountries.com</a>
+            </div>
+    </div>
+</body>
+<script>
+//Το παρακάτω αφορά μόνο τους χρήστες macOS.
+if (navigator.appVersion.indexOf("Macintosh")>0){
+  document.body.style.fontFamily = '"Open Sans"';
+}
+</script>
+</html>
